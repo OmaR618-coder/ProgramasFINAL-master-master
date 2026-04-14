@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Configuración General */
+QMainWindow {
+    background-color: #F0F4F8; /* Gris muy claro azulado */
+}
+
+QWidget {
+    font-family: &quot;Segoe UI&quot;, &quot;Arial&quot;;
+    font-size: 18px; /* Fuente grande */
+    color: #4A4A4A;
+}
+
+/* Barra de Menú */
+QMenuBar {
+    background-color: #FFDEE9; /* Rosa pastel */
+    border-bottom: 2px solid #B5FFFC; /* Línea turquesa */
+    padding: 5px;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 8px 15px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+QMenuBar::item:selected {
+    background-color: #B5FFFC; /* Turquesa pastel al seleccionar */
+    color: #2D5F5D;
+}
+
+/* Menús Desplegables */
+QMenu {
+    background-color: #FFFFFF;
+    border: 1px solid #FFDEE9;
+    padding: 10px;
+}
+
+QMenu::item {
+    padding: 8px 30px 8px 20px;
+    border-radius: 4px;
+    margin: 3px;
+}
+
+QMenu::item:selected {
+    background-color: #E2EBFF; /* Azul pastel suave */
+    color: #4A90E2;
+}
+
+/* Separadores dentro del menú */
+QMenu::separator {
+    height: 2px;
+    background: #F0F0F0;
+    margin: 5px 10px;
+}
+
+/* Acciones (QAction se hereda de QMenu::item) */
+/* Nota: Las acciones no se estilizan directamente por clase, 
+sino a través de su contenedor QMenu */</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>56</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMEN">
+    <property name="title">
+     <string>MENÚ</string>
+    </property>
+    <widget class="QMenu" name="menuTercer_Parcial">
+     <property name="title">
+      <string>Tercer Parcial</string>
+     </property>
+     <addaction name="actionPrograma_3"/>
+     <addaction name="actionPrograma_4"/>
+     <addaction name="separator"/>
+     <addaction name="actionSalir_3"/>
+    </widget>
+    <widget class="QMenu" name="menuSegundo_Parcial">
+     <property name="title">
+      <string>Segundo Parcial</string>
+     </property>
+     <addaction name="actionRegLin"/>
+     <addaction name="actionIntegNum"/>
+     <addaction name="separator"/>
+     <addaction name="actionSalir_2"/>
+    </widget>
+    <addaction name="menuSegundo_Parcial"/>
+    <addaction name="menuTercer_Parcial"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <addaction name="menuMEN"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionRegLin">
+   <property name="text">
+    <string>Regresión Líneal</string>
+   </property>
+  </action>
+  <action name="actionIntegNum">
+   <property name="text">
+    <string>Integración Númerica</string>
+   </property>
+  </action>
+  <action name="actionSalir_2">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionPrograma_3">
+   <property name="text">
+    <string>Programa 3</string>
+   </property>
+  </action>
+  <action name="actionPrograma_4">
+   <property name="text">
+    <string>Programa 4</string>
+   </property>
+  </action>
+  <action name="actionSalir_3">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
