@@ -1,4 +1,5 @@
 import math 
+import numpy as np
 
 class Programa4():
 
@@ -31,6 +32,8 @@ class Programa4():
         self.dof = self.n-2
         self.num_seg = 10
 
+        #p4
+        self.calcularX  = calcularX()
     def caso1(self):
         self.x = [130,650,99,150,128,302,95,945,368,961]
         self.y = [186,699,132,272,291,331,199,1890,788,1601]
@@ -143,3 +146,11 @@ class Programa4():
         tail_area = 1-2*p
         print(tail_area)
         
+    def rango(self):
+        s = np.sum((self.y-self.B0-self.B1*self.x)**2)
+        sigma = (1/8*s)**0.5 #1/8 = 1/n-2
+        r = 1+0.1+(self.x-self.xavg)**2/np.sum((self.x-self.xavg)**2)#0.2 = 1/n osea 1/10
+        rango = self-calcularX(0.35,8) *sigma*(r**0.5) #8 = n-2 y corresponde a dof
+
+    def upi_lpi(self):
+        self.yk - 0.7*rango

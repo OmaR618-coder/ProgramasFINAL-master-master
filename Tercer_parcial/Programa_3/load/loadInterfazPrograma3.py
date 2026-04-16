@@ -17,7 +17,7 @@ class Interfaz3(QDialog): #HEREDAS DE UN DIALOG
             dof = float(self.dof.text())
 
             modelo = Programa3(pvalor, dof)
-
+            modelo.calcularX()
             self.resultadoX.setText(str(modelo.x))
 
         except:
